@@ -1,0 +1,45 @@
+{
+  "name": "brand-ai-readiness-audit",
+  "version": "1.0.0",
+  "description": "Enterprise Agent Skill Marketplace for automated AI Discoverability (GEO) and On-Site Engagement auditing.",
+  "license": "Apache-2.0",
+  "author": "AI Engineering Team",
+  "entrypoint": "skills/audit-orchestrator",
+  "skills": [
+    {
+      "id": "audit-orchestrator",
+      "name": "audit-orchestrator",
+      "path": "skills/audit-orchestrator",
+      "description": "Entrypoint orchestrator skill that coordinates all auditing sub-skills, aggregates findings, and produces a strictly formatted JSON report.",
+      "entrypoint": true
+    },
+    {
+      "id": "crawl-render-audit",
+      "name": "crawl-render-audit",
+      "path": "skills/crawl-render-audit",
+      "description": "Audits website accessibility for AI web crawlers in robots.txt, detects WAF bot blocking, and evaluates client-side JavaScript rendering (CSR) dependencies.",
+      "entrypoint": false
+    },
+    {
+      "id": "structured-data-audit",
+      "name": "structured-data-audit",
+      "path": "skills/structured-data-audit",
+      "description": "Validates presence and completeness of Schema.org JSON-LD structured data (Product, Offer, Organization, FAQPage, Article, sameAs).",
+      "entrypoint": false
+    },
+    {
+      "id": "freshness-corroboration",
+      "name": "freshness-corroboration",
+      "path": "skills/freshness-corroboration",
+      "description": "Detects stale facts: missing modified-time signals, absent/old sitemap lastmod entries, outdated copyright footprints, and canonical integrity.",
+      "entrypoint": false
+    },
+    {
+      "id": "engagement-bounce-audit",
+      "name": "engagement-bounce-audit",
+      "path": "skills/engagement-bounce-audit",
+      "description": "Audits whether a landing page gives users an immediate direct answer, deep-linkable sections, and a layout free of aggressive interstitials.",
+      "entrypoint": false
+    }
+  ]
+}

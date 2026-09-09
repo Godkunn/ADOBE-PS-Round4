@@ -1,0 +1,1417 @@
+{
+  "metadata": {
+    "benchmark_version": "1.0.0",
+    "timestamp": "2026-09-09T20:49:12Z",
+    "total_domains": 8,
+    "successful_audits": 8,
+    "contained_errors": 0,
+    "average_geo_score": 85.5,
+    "duration_seconds": 31.41
+  },
+  "statistics": {
+    "overall": {
+      "mean": 85.5,
+      "median": 85.0,
+      "q1": 78.0,
+      "q3": 91.5,
+      "iqr": 13.5,
+      "std_dev": 7.3,
+      "min": 77.0,
+      "max": 97.0
+    },
+    "pillars": {
+      "crawl_render": 75.0,
+      "structured_data": 91.9,
+      "freshness_security": 93.8,
+      "engagement": 91.9
+    }
+  },
+  "industry_breakdown": {
+    "Developer Ecosystems": {
+      "domain_count": 1,
+      "avg_geo_score": 93.0,
+      "readiness_tier": "High",
+      "critical_count": 0,
+      "high_count": 1,
+      "medium_count": 2
+    },
+    "Government, Education & Knowledge": {
+      "domain_count": 1,
+      "avg_geo_score": 91.0,
+      "readiness_tier": "High",
+      "critical_count": 0,
+      "high_count": 1,
+      "medium_count": 4
+    },
+    "Travel & Hospitality": {
+      "domain_count": 1,
+      "avg_geo_score": 88.0,
+      "readiness_tier": "High",
+      "critical_count": 0,
+      "high_count": 2,
+      "medium_count": 2
+    },
+    "Financial Services": {
+      "domain_count": 1,
+      "avg_geo_score": 97.0,
+      "readiness_tier": "High",
+      "critical_count": 0,
+      "high_count": 0,
+      "medium_count": 3
+    },
+    "B2B SaaS & Tech": {
+      "domain_count": 1,
+      "avg_geo_score": 78.0,
+      "readiness_tier": "Moderate",
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 1
+    },
+    "Media & News": {
+      "domain_count": 1,
+      "avg_geo_score": 77.0,
+      "readiness_tier": "Moderate",
+      "critical_count": 2,
+      "high_count": 0,
+      "medium_count": 3
+    },
+    "Healthcare & Life Sciences": {
+      "domain_count": 1,
+      "avg_geo_score": 78.0,
+      "readiness_tier": "Moderate",
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 1
+    },
+    "E-Commerce & Retail": {
+      "domain_count": 1,
+      "avg_geo_score": 82.0,
+      "readiness_tier": "High",
+      "critical_count": 1,
+      "high_count": 1,
+      "medium_count": 4
+    }
+  },
+  "top_failure_modes": [
+    {
+      "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+      "severity": "medium",
+      "category": "freshness_security",
+      "occurrences": 5,
+      "percentage": 62.5
+    },
+    {
+      "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+      "severity": "high",
+      "category": "structured_data",
+      "occurrences": 4,
+      "percentage": 50.0
+    },
+    {
+      "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+      "severity": "low",
+      "category": "engagement",
+      "occurrences": 4,
+      "percentage": 50.0
+    },
+    {
+      "title": "Intrusive Modal Overlay Detected on Initial View",
+      "severity": "medium",
+      "category": "engagement",
+      "occurrences": 3,
+      "percentage": 37.5
+    },
+    {
+      "title": "Missing Canonical URL Declaration",
+      "severity": "medium",
+      "category": "freshness_security",
+      "occurrences": 3,
+      "percentage": 37.5
+    },
+    {
+      "title": "Missing Deep-Link Target Anchors for AI Citations",
+      "severity": "medium",
+      "category": "engagement",
+      "occurrences": 3,
+      "percentage": 37.5
+    },
+    {
+      "title": "AI Crawler User-Agent Blocked by Server/WAF",
+      "severity": "critical",
+      "category": "crawl_render",
+      "occurrences": 3,
+      "percentage": 37.5
+    },
+    {
+      "title": "Buried Direct Answer Above The Fold (High Bounce Risk)",
+      "severity": "medium",
+      "category": "engagement",
+      "occurrences": 2,
+      "percentage": 25.0
+    },
+    {
+      "title": "robots.txt Inaccessible (HTTP 403/401)",
+      "severity": "high",
+      "category": "crawl_render",
+      "occurrences": 2,
+      "percentage": 25.0
+    },
+    {
+      "title": "Non-200 Response on Primary Page Fetch",
+      "severity": "high",
+      "category": "crawl_render",
+      "occurrences": 2,
+      "percentage": 25.0
+    }
+  ],
+  "results": [
+    {
+      "domain": "github.com",
+      "url": "https://github.com",
+      "vertical": "Developer Ecosystems",
+      "status": "SUCCESS",
+      "geo_score": 93,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 1,
+        "medium": 2,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://github.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-002",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://github.com/sitemap.xml, https://github.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-003",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['logged-out', 'env-production', 'page-responsive', 'header-overlay', 'header-overlay-fixed', 'js-header-overlay-fixed'], ['logged-out', 'env-production', 'page-responsive', 'header-overlay', 'header-overlay-fixed', 'js-header-overlay-fixed']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-004",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 0.79% of the HTML payload (4559 text chars vs 575927 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 2667,
+      "error_type": null,
+      "site": "https://github.com",
+      "category": "Developer Ecosystems",
+      "latency_seconds": 2.67
+    },
+    {
+      "domain": "wikipedia.org",
+      "url": "https://wikipedia.org",
+      "vertical": "Government, Education & Knowledge",
+      "status": "SUCCESS",
+      "geo_score": 91,
+      "summary": {
+        "total_findings": 6,
+        "critical": 0,
+        "high": 1,
+        "medium": 4,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://wikipedia.org. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-003",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://wikipedia.org/sitemap.xml, https://wikipedia.org/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 0 out of 6 major sections/headings contain HTML 'id' attributes (0%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-005",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['banner', 'banner-overlay'], ['overlay-banner']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-006",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 2.78% of the HTML payload (3323 text chars vs 119573 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 3590,
+      "error_type": null,
+      "site": "https://wikipedia.org",
+      "category": "Government, Education & Knowledge",
+      "latency_seconds": 3.59
+    },
+    {
+      "domain": "booking.com",
+      "url": "https://booking.com",
+      "vertical": "Travel & Hospitality",
+      "status": "SUCCESS",
+      "geo_score": 88,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 2,
+        "medium": 2,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Anti-Bot / CAPTCHA Challenge Interception Detected",
+          "severity": "high",
+          "evidence": "Found interactive bot-protection signatures (AWS WAF Bot Control) embedded in initial HTML payload.",
+          "suggested_action": {
+            "summary": "Exempt verified AI crawler User-Agents or adopt cryptographic agent authentication to allow indexing without a manual challenge.",
+            "priority": "high"
+          },
+          "confidence": 0.88
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://booking.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-004",
+          "title": "Buried Direct Answer Above The Fold (High Bounce Risk)",
+          "severity": "medium",
+          "evidence": "No concise (8-120 word) paragraph follows the <h1> in the hero area. AI-referred visitors must hunt for the key answer and risk bouncing.",
+          "suggested_action": {
+            "summary": "Place a concise 2-3 sentence direct-answer summary immediately below the H1 heading before hero carousels or large spacers.",
+            "priority": "medium"
+          },
+          "confidence": 0.78
+        }
+      ],
+      "execution_time_ms": 4250,
+      "error_type": null,
+      "site": "https://booking.com",
+      "category": "Travel & Hospitality",
+      "latency_seconds": 4.25
+    },
+    {
+      "domain": "stripe.com",
+      "url": "https://stripe.com",
+      "vertical": "Financial Services",
+      "status": "SUCCESS",
+      "geo_score": 97,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Sitemap URLs Lack <lastmod> Timestamps",
+          "severity": "medium",
+          "evidence": "https://stripe.com/sitemap/sitemap.xml contains no <lastmod> entries, so crawlers cannot judge which pages changed recently.",
+          "suggested_action": {
+            "summary": "Add accurate ISO-8601 <lastmod> values to sitemap entries, updated whenever page content changes.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-002",
+          "title": "Buried Direct Answer Above The Fold (High Bounce Risk)",
+          "severity": "medium",
+          "evidence": "No concise (8-120 word) paragraph follows the <h1> in the hero area. AI-referred visitors must hunt for the key answer and risk bouncing.",
+          "suggested_action": {
+            "summary": "Place a concise 2-3 sentence direct-answer summary immediately below the H1 heading before hero carousels or large spacers.",
+            "priority": "medium"
+          },
+          "confidence": 0.78
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 11 out of 45 major sections/headings contain HTML 'id' attributes (24%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-004",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 1.52% of the HTML payload (10664 text chars vs 699475 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 4976,
+      "error_type": null,
+      "site": "https://stripe.com",
+      "category": "Financial Services",
+      "latency_seconds": 4.98
+    },
+    {
+      "domain": "salesforce.com",
+      "url": "https://salesforce.com",
+      "vertical": "B2B SaaS & Tech",
+      "status": "SUCCESS",
+      "geo_score": 78,
+      "summary": {
+        "total_findings": 4,
+        "critical": 1,
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://salesforce.com with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-002",
+          "title": "robots.txt Inaccessible (HTTP 403/401)",
+          "severity": "high",
+          "evidence": "Request to https://salesforce.com/robots.txt returned HTTP 403. AI crawlers cannot verify crawl permissions.",
+          "suggested_action": {
+            "summary": "Ensure robots.txt is publicly accessible with HTTP 200 for all web agents.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Non-200 Response on Primary Page Fetch",
+          "severity": "high",
+          "evidence": "GET https://salesforce.com returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Investigate server errors or bot-blocking rules causing non-success responses.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-004",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://salesforce.com/sitemap.xml, https://salesforce.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        }
+      ],
+      "execution_time_ms": 5122,
+      "error_type": null,
+      "site": "https://salesforce.com",
+      "category": "B2B SaaS & Tech",
+      "latency_seconds": 5.12
+    },
+    {
+      "domain": "nytimes.com",
+      "url": "https://nytimes.com",
+      "vertical": "Media & News",
+      "status": "SUCCESS",
+      "geo_score": 77,
+      "summary": {
+        "total_findings": 6,
+        "critical": 2,
+        "high": 0,
+        "medium": 3,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Web Crawlers Blocked in robots.txt",
+          "severity": "critical",
+          "evidence": "robots.txt at https://nytimes.com/robots.txt disallows root indexing for AI agents: Applebot-Extended, Bytespider, CCBot, ChatGPT-User, Claude-Web, ClaudeBot, GPTBot, Google-Extended, PerplexityBot, anthropic-ai, cohere-ai.",
+          "suggested_action": {
+            "summary": "Update robots.txt to explicitly allow AI search crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) to index public product and content routes.",
+            "priority": "high"
+          },
+          "confidence": 0.98
+        },
+        {
+          "id": "F-002",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://nytimes.com with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Organization Schema Markup",
+          "severity": "medium",
+          "evidence": "Page lacks Schema.org 'Organization' or 'Brand' definition. AI engines cannot establish canonical knowledge-graph identity.",
+          "suggested_action": {
+            "summary": "Add Schema.org Organization markup specifying legalName, url, logo, and sameAs authoritative links.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 6 out of 57 major sections/headings contain HTML 'id' attributes (11%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-005",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['css-gr7b3e']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-006",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 0.43% of the HTML payload (5513 text chars vs 1287346 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 5738,
+      "error_type": null,
+      "site": "https://nytimes.com",
+      "category": "Media & News",
+      "latency_seconds": 5.74
+    },
+    {
+      "domain": "mayoclinic.org",
+      "url": "https://mayoclinic.org",
+      "vertical": "Healthcare & Life Sciences",
+      "status": "SUCCESS",
+      "geo_score": 78,
+      "summary": {
+        "total_findings": 4,
+        "critical": 1,
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://mayoclinic.org with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-002",
+          "title": "robots.txt Inaccessible (HTTP 403/401)",
+          "severity": "high",
+          "evidence": "Request to https://mayoclinic.org/robots.txt returned HTTP 403. AI crawlers cannot verify crawl permissions.",
+          "suggested_action": {
+            "summary": "Ensure robots.txt is publicly accessible with HTTP 200 for all web agents.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Non-200 Response on Primary Page Fetch",
+          "severity": "high",
+          "evidence": "GET https://mayoclinic.org returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Investigate server errors or bot-blocking rules causing non-success responses.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-004",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://mayoclinic.org/sitemap.xml, https://mayoclinic.org/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        }
+      ],
+      "execution_time_ms": 6617,
+      "error_type": null,
+      "site": "https://mayoclinic.org",
+      "category": "Healthcare & Life Sciences",
+      "latency_seconds": 6.62
+    },
+    {
+      "domain": "amazon.com",
+      "url": "https://amazon.com",
+      "vertical": "E-Commerce & Retail",
+      "status": "SUCCESS",
+      "geo_score": 82,
+      "summary": {
+        "total_findings": 6,
+        "critical": 1,
+        "high": 1,
+        "medium": 4,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Web Crawlers Blocked in robots.txt",
+          "severity": "critical",
+          "evidence": "robots.txt at https://amazon.com/robots.txt disallows root indexing for AI agents: Bytespider, CCBot, ChatGPT-User, Claude-Web, ClaudeBot, GPTBot, Google-Extended, PerplexityBot, cohere-ai.",
+          "suggested_action": {
+            "summary": "Update robots.txt to explicitly allow AI search crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) to index public product and content routes.",
+            "priority": "high"
+          },
+          "confidence": 0.98
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://amazon.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Strict-Transport-Security (HSTS) Header",
+          "severity": "medium",
+          "evidence": "Target HTTPS origin does not broadcast a Strict-Transport-Security header. Autonomous web scrapers flag non-HSTS origins as lower transport trust.",
+          "suggested_action": {
+            "summary": "Configure web server or CDN to send 'Strict-Transport-Security: max-age=31536000; includeSubDomains' on all HTTPS endpoints.",
+            "priority": "low"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-005",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://amazon.com/sitemap.xml, https://amazon.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-006",
+          "title": "No H1 Heading Found",
+          "severity": "medium",
+          "evidence": "Page has no <h1> element, making it hard for both users and AI assistants to anchor the page's primary topic context.",
+          "suggested_action": {
+            "summary": "Add a single, clear <h1> communicating the core subject at the top of the content area.",
+            "priority": "medium"
+          },
+          "confidence": 1.0
+        }
+      ],
+      "execution_time_ms": 31344,
+      "error_type": null,
+      "site": "https://amazon.com",
+      "category": "E-Commerce & Retail",
+      "latency_seconds": 31.34
+    }
+  ],
+  "benchmark_metadata": {
+    "title": "Global Brand AI-Readiness & GEO Benchmark Report (500+ Domains)",
+    "executed_at": "2026-09-09T20:49:12Z",
+    "total_domains_audited": 8,
+    "total_execution_seconds": 31.41,
+    "global_average_geo_score": 85.5,
+    "industry_sectors_covered": 8
+  },
+  "sector_breakdown": {
+    "Developer Ecosystems": {
+      "count": 1,
+      "avg_score": 93.0,
+      "total_findings": 3,
+      "critical_findings": 0,
+      "high_findings": 1,
+      "medium_findings": 2
+    },
+    "Government, Education & Knowledge": {
+      "count": 1,
+      "avg_score": 91.0,
+      "total_findings": 5,
+      "critical_findings": 0,
+      "high_findings": 1,
+      "medium_findings": 4
+    },
+    "Travel & Hospitality": {
+      "count": 1,
+      "avg_score": 88.0,
+      "total_findings": 4,
+      "critical_findings": 0,
+      "high_findings": 2,
+      "medium_findings": 2
+    },
+    "Financial Services": {
+      "count": 1,
+      "avg_score": 97.0,
+      "total_findings": 3,
+      "critical_findings": 0,
+      "high_findings": 0,
+      "medium_findings": 3
+    },
+    "B2B SaaS & Tech": {
+      "count": 1,
+      "avg_score": 78.0,
+      "total_findings": 4,
+      "critical_findings": 1,
+      "high_findings": 2,
+      "medium_findings": 1
+    },
+    "Media & News": {
+      "count": 1,
+      "avg_score": 77.0,
+      "total_findings": 5,
+      "critical_findings": 2,
+      "high_findings": 0,
+      "medium_findings": 3
+    },
+    "Healthcare & Life Sciences": {
+      "count": 1,
+      "avg_score": 78.0,
+      "total_findings": 4,
+      "critical_findings": 1,
+      "high_findings": 2,
+      "medium_findings": 1
+    },
+    "E-Commerce & Retail": {
+      "count": 1,
+      "avg_score": 82.0,
+      "total_findings": 6,
+      "critical_findings": 1,
+      "high_findings": 1,
+      "medium_findings": 4
+    }
+  },
+  "domain_results": [
+    {
+      "domain": "github.com",
+      "url": "https://github.com",
+      "vertical": "Developer Ecosystems",
+      "status": "SUCCESS",
+      "geo_score": 93,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 1,
+        "medium": 2,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://github.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-002",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://github.com/sitemap.xml, https://github.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-003",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['logged-out', 'env-production', 'page-responsive', 'header-overlay', 'header-overlay-fixed', 'js-header-overlay-fixed'], ['logged-out', 'env-production', 'page-responsive', 'header-overlay', 'header-overlay-fixed', 'js-header-overlay-fixed']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-004",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 0.79% of the HTML payload (4559 text chars vs 575927 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 2667,
+      "error_type": null,
+      "site": "https://github.com",
+      "category": "Developer Ecosystems",
+      "latency_seconds": 2.67
+    },
+    {
+      "domain": "wikipedia.org",
+      "url": "https://wikipedia.org",
+      "vertical": "Government, Education & Knowledge",
+      "status": "SUCCESS",
+      "geo_score": 91,
+      "summary": {
+        "total_findings": 6,
+        "critical": 0,
+        "high": 1,
+        "medium": 4,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://wikipedia.org. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-003",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://wikipedia.org/sitemap.xml, https://wikipedia.org/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 0 out of 6 major sections/headings contain HTML 'id' attributes (0%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-005",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['banner', 'banner-overlay'], ['overlay-banner']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-006",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 2.78% of the HTML payload (3323 text chars vs 119573 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 3590,
+      "error_type": null,
+      "site": "https://wikipedia.org",
+      "category": "Government, Education & Knowledge",
+      "latency_seconds": 3.59
+    },
+    {
+      "domain": "booking.com",
+      "url": "https://booking.com",
+      "vertical": "Travel & Hospitality",
+      "status": "SUCCESS",
+      "geo_score": 88,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 2,
+        "medium": 2,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Anti-Bot / CAPTCHA Challenge Interception Detected",
+          "severity": "high",
+          "evidence": "Found interactive bot-protection signatures (AWS WAF Bot Control) embedded in initial HTML payload.",
+          "suggested_action": {
+            "summary": "Exempt verified AI crawler User-Agents or adopt cryptographic agent authentication to allow indexing without a manual challenge.",
+            "priority": "high"
+          },
+          "confidence": 0.88
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://booking.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-004",
+          "title": "Buried Direct Answer Above The Fold (High Bounce Risk)",
+          "severity": "medium",
+          "evidence": "No concise (8-120 word) paragraph follows the <h1> in the hero area. AI-referred visitors must hunt for the key answer and risk bouncing.",
+          "suggested_action": {
+            "summary": "Place a concise 2-3 sentence direct-answer summary immediately below the H1 heading before hero carousels or large spacers.",
+            "priority": "medium"
+          },
+          "confidence": 0.78
+        }
+      ],
+      "execution_time_ms": 4250,
+      "error_type": null,
+      "site": "https://booking.com",
+      "category": "Travel & Hospitality",
+      "latency_seconds": 4.25
+    },
+    {
+      "domain": "stripe.com",
+      "url": "https://stripe.com",
+      "vertical": "Financial Services",
+      "status": "SUCCESS",
+      "geo_score": 97,
+      "summary": {
+        "total_findings": 4,
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "Sitemap URLs Lack <lastmod> Timestamps",
+          "severity": "medium",
+          "evidence": "https://stripe.com/sitemap/sitemap.xml contains no <lastmod> entries, so crawlers cannot judge which pages changed recently.",
+          "suggested_action": {
+            "summary": "Add accurate ISO-8601 <lastmod> values to sitemap entries, updated whenever page content changes.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-002",
+          "title": "Buried Direct Answer Above The Fold (High Bounce Risk)",
+          "severity": "medium",
+          "evidence": "No concise (8-120 word) paragraph follows the <h1> in the hero area. AI-referred visitors must hunt for the key answer and risk bouncing.",
+          "suggested_action": {
+            "summary": "Place a concise 2-3 sentence direct-answer summary immediately below the H1 heading before hero carousels or large spacers.",
+            "priority": "medium"
+          },
+          "confidence": 0.78
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 11 out of 45 major sections/headings contain HTML 'id' attributes (24%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-004",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 1.52% of the HTML payload (10664 text chars vs 699475 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 4976,
+      "error_type": null,
+      "site": "https://stripe.com",
+      "category": "Financial Services",
+      "latency_seconds": 4.98
+    },
+    {
+      "domain": "salesforce.com",
+      "url": "https://salesforce.com",
+      "vertical": "B2B SaaS & Tech",
+      "status": "SUCCESS",
+      "geo_score": 78,
+      "summary": {
+        "total_findings": 4,
+        "critical": 1,
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://salesforce.com with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-002",
+          "title": "robots.txt Inaccessible (HTTP 403/401)",
+          "severity": "high",
+          "evidence": "Request to https://salesforce.com/robots.txt returned HTTP 403. AI crawlers cannot verify crawl permissions.",
+          "suggested_action": {
+            "summary": "Ensure robots.txt is publicly accessible with HTTP 200 for all web agents.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Non-200 Response on Primary Page Fetch",
+          "severity": "high",
+          "evidence": "GET https://salesforce.com returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Investigate server errors or bot-blocking rules causing non-success responses.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-004",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://salesforce.com/sitemap.xml, https://salesforce.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        }
+      ],
+      "execution_time_ms": 5122,
+      "error_type": null,
+      "site": "https://salesforce.com",
+      "category": "B2B SaaS & Tech",
+      "latency_seconds": 5.12
+    },
+    {
+      "domain": "nytimes.com",
+      "url": "https://nytimes.com",
+      "vertical": "Media & News",
+      "status": "SUCCESS",
+      "geo_score": 77,
+      "summary": {
+        "total_findings": 6,
+        "critical": 2,
+        "high": 0,
+        "medium": 3,
+        "low": 1
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Web Crawlers Blocked in robots.txt",
+          "severity": "critical",
+          "evidence": "robots.txt at https://nytimes.com/robots.txt disallows root indexing for AI agents: Applebot-Extended, Bytespider, CCBot, ChatGPT-User, Claude-Web, ClaudeBot, GPTBot, Google-Extended, PerplexityBot, anthropic-ai, cohere-ai.",
+          "suggested_action": {
+            "summary": "Update robots.txt to explicitly allow AI search crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) to index public product and content routes.",
+            "priority": "high"
+          },
+          "confidence": 0.98
+        },
+        {
+          "id": "F-002",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://nytimes.com with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Organization Schema Markup",
+          "severity": "medium",
+          "evidence": "Page lacks Schema.org 'Organization' or 'Brand' definition. AI engines cannot establish canonical knowledge-graph identity.",
+          "suggested_action": {
+            "summary": "Add Schema.org Organization markup specifying legalName, url, logo, and sameAs authoritative links.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Deep-Link Target Anchors for AI Citations",
+          "severity": "medium",
+          "evidence": "Only 6 out of 57 major sections/headings contain HTML 'id' attributes (11%). AI search assistants cannot deep-link users directly to cited answers.",
+          "suggested_action": {
+            "summary": "Assign semantic HTML 'id' attributes (e.g. <h2 id='pricing'>, <section id='specs'>) to enable precision deep-anchor citations by AI models.",
+            "priority": "medium"
+          },
+          "confidence": 0.85
+        },
+        {
+          "id": "F-005",
+          "title": "Intrusive Modal Overlay Detected on Initial View",
+          "severity": "medium",
+          "evidence": "Detected full-screen popup/modal elements ([['css-gr7b3e']]) that may intercept visitors immediately upon arrival from AI search summaries.",
+          "suggested_action": {
+            "summary": "Suppress disruptive popups for users arriving from AI search referrers, or defer modal appearance until substantial scroll depth.",
+            "priority": "medium"
+          },
+          "confidence": 0.72
+        },
+        {
+          "id": "F-006",
+          "title": "Low Text-to-HTML Ratio (Excessive DOM Bloat)",
+          "severity": "low",
+          "evidence": "Visible body text is 0.43% of the HTML payload (5513 text chars vs 1287346 HTML chars). Excessive markup impairs AI token-ingestion efficiency.",
+          "suggested_action": {
+            "summary": "Minify markup, externalise inline CSS/JS, and eliminate unnecessary nested wrapper divs to improve content density.",
+            "priority": "low"
+          },
+          "confidence": 0.88
+        }
+      ],
+      "execution_time_ms": 5738,
+      "error_type": null,
+      "site": "https://nytimes.com",
+      "category": "Media & News",
+      "latency_seconds": 5.74
+    },
+    {
+      "domain": "mayoclinic.org",
+      "url": "https://mayoclinic.org",
+      "vertical": "Healthcare & Life Sciences",
+      "status": "SUCCESS",
+      "geo_score": 78,
+      "summary": {
+        "total_findings": 4,
+        "critical": 1,
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Crawler User-Agent Blocked by Server/WAF",
+          "severity": "critical",
+          "evidence": "Requesting https://mayoclinic.org with a GPTBot User-Agent returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Configure Cloudflare, Akamai, or edge firewall rules to allow verified AI search crawlers rather than issuing an automated block.",
+            "priority": "high"
+          },
+          "confidence": 0.92
+        },
+        {
+          "id": "F-002",
+          "title": "robots.txt Inaccessible (HTTP 403/401)",
+          "severity": "high",
+          "evidence": "Request to https://mayoclinic.org/robots.txt returned HTTP 403. AI crawlers cannot verify crawl permissions.",
+          "suggested_action": {
+            "summary": "Ensure robots.txt is publicly accessible with HTTP 200 for all web agents.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Non-200 Response on Primary Page Fetch",
+          "severity": "high",
+          "evidence": "GET https://mayoclinic.org returned HTTP 403.",
+          "suggested_action": {
+            "summary": "Investigate server errors or bot-blocking rules causing non-success responses.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-004",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://mayoclinic.org/sitemap.xml, https://mayoclinic.org/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        }
+      ],
+      "execution_time_ms": 6617,
+      "error_type": null,
+      "site": "https://mayoclinic.org",
+      "category": "Healthcare & Life Sciences",
+      "latency_seconds": 6.62
+    },
+    {
+      "domain": "amazon.com",
+      "url": "https://amazon.com",
+      "vertical": "E-Commerce & Retail",
+      "status": "SUCCESS",
+      "geo_score": 82,
+      "summary": {
+        "total_findings": 6,
+        "critical": 1,
+        "high": 1,
+        "medium": 4,
+        "low": 0
+      },
+      "findings": [
+        {
+          "id": "F-001",
+          "title": "AI Web Crawlers Blocked in robots.txt",
+          "severity": "critical",
+          "evidence": "robots.txt at https://amazon.com/robots.txt disallows root indexing for AI agents: Bytespider, CCBot, ChatGPT-User, Claude-Web, ClaudeBot, GPTBot, Google-Extended, PerplexityBot, cohere-ai.",
+          "suggested_action": {
+            "summary": "Update robots.txt to explicitly allow AI search crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) to index public product and content routes.",
+            "priority": "high"
+          },
+          "confidence": 0.98
+        },
+        {
+          "id": "F-002",
+          "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+          "severity": "high",
+          "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://amazon.com. AI search crawlers cannot deterministically extract entities or facts.",
+          "suggested_action": {
+            "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+            "priority": "high"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-003",
+          "title": "Missing Canonical URL Declaration",
+          "severity": "medium",
+          "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+          "suggested_action": {
+            "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish a single-source-of-truth URL.",
+            "priority": "medium"
+          },
+          "confidence": 0.97
+        },
+        {
+          "id": "F-004",
+          "title": "Missing Strict-Transport-Security (HSTS) Header",
+          "severity": "medium",
+          "evidence": "Target HTTPS origin does not broadcast a Strict-Transport-Security header. Autonomous web scrapers flag non-HSTS origins as lower transport trust.",
+          "suggested_action": {
+            "summary": "Configure web server or CDN to send 'Strict-Transport-Security: max-age=31536000; includeSubDomains' on all HTTPS endpoints.",
+            "priority": "low"
+          },
+          "confidence": 1.0
+        },
+        {
+          "id": "F-005",
+          "title": "Sitemap Not Found (/sitemap.xml Inaccessible)",
+          "severity": "medium",
+          "evidence": "Could not locate a valid XML sitemap at https://amazon.com/sitemap.xml, https://amazon.com/sitemap_index.xml, or via robots.txt Sitemap: directives. Search bots cannot systematically discover refreshed URLs.",
+          "suggested_action": {
+            "summary": "Publish an XML sitemap at /sitemap.xml and reference it within robots.txt as 'Sitemap: https://.../sitemap.xml'.",
+            "priority": "medium"
+          },
+          "confidence": 0.9
+        },
+        {
+          "id": "F-006",
+          "title": "No H1 Heading Found",
+          "severity": "medium",
+          "evidence": "Page has no <h1> element, making it hard for both users and AI assistants to anchor the page's primary topic context.",
+          "suggested_action": {
+            "summary": "Add a single, clear <h1> communicating the core subject at the top of the content area.",
+            "priority": "medium"
+          },
+          "confidence": 1.0
+        }
+      ],
+      "execution_time_ms": 31344,
+      "error_type": null,
+      "site": "https://amazon.com",
+      "category": "E-Commerce & Retail",
+      "latency_seconds": 31.34
+    }
+  ]
+}

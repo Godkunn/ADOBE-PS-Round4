@@ -1,0 +1,39 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Test caches
+.pytest_cache/
+
+# Output reports
+reports/
+*.log
+
+# Distribution archives
+*.zip
+*.tar.gz
+*.egg-info/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE & Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI Agent & Internal Metadata
+.agents/
+.gemini/
+build/
+dist/

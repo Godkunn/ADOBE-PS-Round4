@@ -1,0 +1,75 @@
+{
+  "site": "https://example.com",
+  "audited_at": "2026-08-28T12:00:00Z",
+  "geo_score": 87,
+  "pillar_scores": {
+    "crawl_render": 87.2,
+    "structured_data": 85.0,
+    "freshness_security": 80.3,
+    "engagement": 100.0
+  },
+  "summary": {
+    "total_findings": 5,
+    "critical": 0,
+    "high": 2,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Content Hidden Behind Client-Side JavaScript (CSR)",
+      "severity": "high",
+      "evidence": "Raw server-rendered HTML contains only 21 visible words with 0 script tags. AI crawlers that do not execute JavaScript will see a near-empty page.",
+      "suggested_action": {
+        "summary": "Adopt Server-Side Rendering (SSR) or Static Site Generation (SSG) for key entity/product pages so facts exist in the raw HTML response.",
+        "priority": "high"
+      },
+      "confidence": 0.85
+    },
+    {
+      "id": "F-002",
+      "title": "Missing Machine-Readable Structured Data (JSON-LD)",
+      "severity": "high",
+      "evidence": "Found 0 valid <script type='application/ld+json'> blocks on https://example.com. AI search crawlers cannot deterministically extract entities or facts.",
+      "suggested_action": {
+        "summary": "Add Schema.org JSON-LD markup (Organization at minimum, plus Product/FAQPage/Article where relevant) so AI engines can extract unambiguous facts.",
+        "priority": "high"
+      },
+      "confidence": 1.0
+    },
+    {
+      "id": "F-003",
+      "title": "Missing Temporal & Freshness Metadata",
+      "severity": "medium",
+      "evidence": "https://example.com exposes no article:modified_time meta tag, Last-Modified HTTP header, or dateModified/datePublished schema field. AI search engines cannot verify content recency.",
+      "suggested_action": {
+        "summary": "Publish machine-readable ISO-8601 timestamps in OpenGraph and Schema.org dateModified metadata on all dynamic and catalog pages.",
+        "priority": "medium"
+      },
+      "confidence": 0.95
+    },
+    {
+      "id": "F-004",
+      "title": "Missing Canonical URL Declaration",
+      "severity": "medium",
+      "evidence": "Page does not declare a <link rel='canonical'> tag. Inconsistent URLs may cause conflicting knowledge citations across AI engines.",
+      "suggested_action": {
+        "summary": "Add a self-referential <link rel='canonical' href='https://...'> in <head> to establish single-source-of-truth URL indexing.",
+        "priority": "medium"
+      },
+      "confidence": 0.97
+    },
+    {
+      "id": "F-005",
+      "title": "Sitemap Missing or Invalid",
+      "severity": "medium",
+      "evidence": "https://example.com/sitemap.xml returned HTTP 404 or is not a valid XML sitemap.",
+      "suggested_action": {
+        "summary": "Publish a valid sitemap.xml at the domain root and reference it in robots.txt.",
+        "priority": "medium"
+      },
+      "confidence": 0.90
+    }
+  ]
+}

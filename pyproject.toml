@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brand-ai-readiness-audit"
+version = "1.0.0"
+description = "Enterprise Agent Skill Marketplace for automated AI Discoverability (GEO) and On-Site Engagement auditing."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "AI Engineering Team" }
+]
+keywords = ["geo", "seo", "ai-discoverability", "agent-skills", "schema", "robots-txt"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "lxml>=4.9.0",
+    "urllib3>=1.26.0",
+]
+
+# ---------------------------------------------------------------------------
+# CLI entry point
+# brand-ai-audit delegates to brand_ai_audit/cli.py which dynamically adds
+# the orchestrator scripts directory to sys.path before calling run_audit.main().
+# This avoids the hyphens-in-module-path problem that breaks direct script refs.
+# ---------------------------------------------------------------------------
+[project.scripts]
+brand-ai-audit = "brand_ai_audit.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-timeout",
+    "pyyaml>=6.0",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["brand_ai_audit*", "skills*"]
+
+[tool.setuptools.package-data]
+skills = ["*", "*/*", "*/*/*", "*/*/*/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

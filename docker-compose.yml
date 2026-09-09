@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  audit-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: brand-ai-readiness-audit:latest
+    container_name: brand-ai-auditor
+    restart: "no"
+    command: ["https://example.com"]
+    volumes:
+      - ./reports:/app/reports
